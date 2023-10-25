@@ -12,8 +12,7 @@
 //         document.getElementById('footer-placeholder').innerHTML = data;
 //     });
 
-// Function to load content based on the hash
-function loadContent() {
+function loadPage() {
     const hash = window.location.hash.substr(1); // Get the hash part without the #
     let contentFile = 'pages/home.html'; // Default content
 
@@ -42,16 +41,16 @@ function loadContent() {
             })
     }
 
-    // fetch(contentFile)
-    //     .then(response => response.text())
-    //     .then(data => {
-    //         document.getElementById('content').innerHTML = data;
-    //     });
+    fetch(contentFile)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content-placeholder').innerHTML = data;
+        });
 
     console.log(hash)
 }
 
-window.addEventListener('hashchange', loadContent);
+window.addEventListener('hashchange', loadPage);
 
 // Initial page load
-loadContent();
+loadPage();

@@ -5,17 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de Luca</title>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#posts">Posts</a></li>
-        <li><a href="#about">About Me</a></li>
-    </ul>
-    <!-- Page-specific content -->
-    <div id="content"></div>
+    <header class="border">
+        <nav>
+            <ul>
+                <a href="#">
+                    <li class="nav-item">Home</li>
+                </a>
+                <a href="#posts">
+                    <li class="nav-item">Posts</li>
+                </a>
+                <a href="#about">
+                    <li class="nav-item">About Me</li>
+                </a>
+            </ul>
+        </nav>
+        <footer>
+            github
+        </footer>
+    </header>
+    <main id="content-placeholder" class="border">
+    </main>
 </body>
 
 </html>
