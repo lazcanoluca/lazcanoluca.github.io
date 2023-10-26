@@ -1,3 +1,5 @@
+// import loadPosts from "./js/posts";
+
 // script.js
 // Include the common header and footer
 // fetch('header.html')
@@ -5,6 +7,7 @@
 //     .then(data => {
 //         document.getElementById('header-placeholder').innerHTML = data;
 //     });
+
 
 // fetch('footer.html')
 //     .then(response => response.text())
@@ -20,6 +23,7 @@ function loadPage() {
         contentFile = 'pages/about.html';
     } else if (hash === 'posts') {
         contentFile = 'pages/posts.html'
+        loadPosts()
     } else if (hash === 'a_post') {
         let postLayoutFile = 'pages/post.html'
 
