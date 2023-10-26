@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1;
+  box-sizing: border-box;
+  /* color: var(--primary); */
+  /* font-family: "Ubuntu", sans-serif; */
+  /* --font-main: var("Ubuntu", sans-serif); */
+
+  --sidebar-width: 14rem;
+  /* --primary: #ea580c; */
+  /* --primary: #0d9488; */
+  --primary: #db2777;
+  --primary-foreground: #0a0a0a;
+  --secondary: #262626;
+  --secondary-foreground: #d6d3d1;
+  --secondary-dark: #171717;
+
+  --border-width: 0.1rem;
+  --border-radius: 0;
+  --border-color: var(--primary-foreground);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.text-body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+}
+
+.text-title {
+  font-family: "Ubuntu";
+  font-size: 3rem;
+}
+
+.text-subtitle {
+  font-family: "Ubuntu";
+  font-size: 12;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.color-secondary {
+  color: var(--secondary);
+}
+
+.color-primary-foreground {
+  color: var(--primary-foreground);
+}
+
+.color-secondary-foreground {
+  color: var(--secondary-foreground);
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.w-full {
+  width: 100%;
+}
