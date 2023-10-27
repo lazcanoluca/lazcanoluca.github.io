@@ -1,5 +1,6 @@
-const fs = require('fs')
-const path = require('path')
+export { loadPosts }
+// const fs = require('fs')
+// const path = require('path')
 
 /**
  * Un post.
@@ -14,11 +15,11 @@ const POSTS_DIR = 'posts'
  * Carga los posts desde /posts.
  * @returns {Post[]}
  */
-export function loadPosts() {
+function loadPosts() {
     console.log('algo')
-    const files = fs.readdirSync(POSTS_DIR);
+    // const files = fs.readdirSync(POSTS_DIR);
 
-    for (const file of files) {
-        console.log(file)
-    }
+    // for (const file of files) {
+    //     console.log(file)
+    // }
 }

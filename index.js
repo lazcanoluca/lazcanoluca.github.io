@@ -1,4 +1,4 @@
-// import loadPosts from "./js/posts";
+import { loadPosts } from "./js/posts.js";
 
 // script.js
 // Include the common header and footer
