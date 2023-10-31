@@ -15,14 +15,16 @@ const POSTS_DIR = '../posts'
 export async function loadPosts(src = POSTS_DIR) {
 
     try {
-        const files = await fetch(POSTS_DIR)
+        const files = await fetch(src)
         const text = await files.text()
-        return text
+        const posts = text
             .split("\"")
             .filter(str =>
                 str.trim().endsWith('.html') &&
                 str.trim().startsWith('\/')
             );
+        console.log(posts)
+        return posts
     } catch (err) {
         throw new Error('No se pudo fetchear el directorio.')
     }
