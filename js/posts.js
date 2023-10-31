@@ -10,7 +10,8 @@ const POSTS_DIR = '../posts'
 
 /**
  * Devuelve las rutas de los posts en /posts.
- * @returns {string[]}
+ * @param {string?} src - El directorio con los posts.
+ * @returns {string[]} - Un array con las rutas de los posts.
  */
 export async function loadPostsRoutes(src = POSTS_DIR) {
 
@@ -60,6 +61,11 @@ export async function getPostMetadata(src) {
     }
 }
 
+/**
+ * 
+ * @param {string?} src - El directorio con los posts.
+ * @returns {PostMetadata[]} Array con la metadata de cada posts.
+ */
 export async function getPostsList(src = POSTS_DIR) {
 
     try {
