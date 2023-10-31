@@ -16,11 +16,11 @@ header {
   height: 100vh;
   padding: 2rem;
   background-color: var(--secondary-dark);
-  border-right: 1px solid var(--primary);
+  border-right: 0.1rem solid var(--primary);
 }
 
 .nav-icon {
-  margin-right: 10px;
+  margin-right: 1rem;
   fill: var(--secondary-dark);
 }
 
