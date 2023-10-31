@@ -19,7 +19,12 @@ header {
   border-right: 1px solid var(--primary);
 }
 
-.icon {
+.nav-icon {
+  margin-right: 10px;
+  fill: var(--secondary-dark);
+}
+
+.social-icon {
   fill: var(--primary);
 }
 
@@ -36,9 +41,10 @@ header {
 }
 
 .nav-item:hover,
-.nav-item:focus {
-  /* background-color: var(--primary); */
+.nav-item:focus,
+.nav-item:hover > .nav-icon {
   color: var(--primary);
+  fill: var(--primary);
 }
 
 main {
