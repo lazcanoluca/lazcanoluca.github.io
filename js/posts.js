@@ -12,7 +12,7 @@ const POSTS_DIR = '../posts'
  * Devuelve las rutas de los posts en /posts.
  * @returns {string[]}
  */
-export async function loadPosts(src = POSTS_DIR) {
+export async function loadPostsRoutes(src = POSTS_DIR) {
 
     try {
         const files = await fetch(src)
@@ -24,7 +24,7 @@ export async function loadPosts(src = POSTS_DIR) {
                 str.trim().startsWith('\/')
             );
 
-        console.log(posts)
+        // console.log(posts)
 
         return posts
     } catch (err) {
@@ -51,11 +51,29 @@ export async function getPostMetadata(src) {
             autor: metadata.namedItem('autor').content
         }
 
-        console.log(postMetadata)
+        // console.log(postMetadata)
 
         return postMetadata;
 
     } catch (err) {
         throw new Error(err)
+    }
+}
+
+export async function getPostsList(src = POSTS_DIR) {
+
+    try {
+        const postsRoutes = await loadPostsRoutes(src);
+        const postsPromises = postsRoutes.map(async postRoute =>
+            await getPostMetadata(postRoute)
+        );
+
+        const posts = await Promise.all(postsPromises);
+        // console.log(posts);
+
+        return posts;
+
+    } catch (err) {
+        throw new Error(err);
     }
 }
