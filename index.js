@@ -1,29 +1,17 @@
-import { loadPosts } from "./js/posts.js";
-
-// script.js
-// Include the common header and footer
-// fetch('header.html')
-//     .then(response => response.text())
-//     .then(data => {
-//         document.getElementById('header-placeholder').innerHTML = data;
-//     });
-
-
-// fetch('footer.html')
-//     .then(response => response.text())
-//     .then(data => {
-//         document.getElementById('footer-placeholder').innerHTML = data;
-//     });
+// import { loadPosts } from "./js/posts.js";
 
 function loadPage() {
     const hash = window.location.hash.substr(1); // Get the hash part without the #
     let contentFile = 'pages/home.html'; // Default content
 
+    // Cada página se llama como su ruta. Corta.
+    contentFile = hash ? `pages/${hash}.html` : 'pages/home.html'
+
     if (hash === 'about') {
         contentFile = 'pages/about.html';
     } else if (hash === 'posts') {
         contentFile = 'pages/posts.html'
-        loadPosts()
+        // loadPosts()
     } else if (hash === 'a_post') {
         let postLayoutFile = 'pages/post.html'
 

@@ -27,6 +27,7 @@
   --border-color: var(--primary-foreground);
 }
 
+p,
 h1,
 h2,
 h3,
@@ -37,17 +38,24 @@ h6 {
   font-weight: inherit;
 }
 
+p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+}
+
 .text-body {
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
 }
 
-.text-title {
+.text-title,
+h1 {
   font-family: "Ubuntu";
   font-size: 3rem;
 }
 
-.text-subtitle {
+.text-subtitle,
+h2 {
   font-family: "Ubuntu";
   font-size: 12;
 }
