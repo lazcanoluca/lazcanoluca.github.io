@@ -1,8 +1,8 @@
 /**
  * Un post.
- * @typedef {Object} Post
+ * @typedef {Object} PostMetadata
  * @property {string} titulo - Titulo.
- * @property {string} subtitulo - Subtitulo.
+ * @property {string} autor - Autor.
  */
 
 
@@ -23,27 +23,39 @@ export async function loadPosts(src = POSTS_DIR) {
                 str.trim().endsWith('.html') &&
                 str.trim().startsWith('\/')
             );
+
         console.log(posts)
+
         return posts
     } catch (err) {
-        throw new Error('No se pudo fetchear el directorio.')
+        throw new Error(err)
     }
 }
 
 /**
  * Parsea el HTML pasado y devuelve el post.
  * @param {string} src - The HTML content to parse.
- * @returns {Post} - The parsed post object.
+ * @returns {PostMetadata} - The parsed post object.
  */
-export async function parseHtmlToPost(src) {
-    fetch(src)
-        .then(res => res.text())
-        .then(data => {
-            const metadata = data.getElementsByTagName('meta');
-            const autor = metadata.namedItem('autor').content;
-            const titulo = metadata.namedItem('titulo').content;
-        })
-        .catch(e => {
-            return new Error('No se pudo cargar e')
-        })
+export async function getPostMetadata(src) {
+
+    try {
+        const files = await fetch(src);
+        const text = await files.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+        const metadata = doc.getElementsByTagName('meta');
+
+        const postMetadata = {
+            titulo: metadata.namedItem('titulo').content,
+            autor: metadata.namedItem('autor').content
+        }
+
+        console.log(postMetadata)
+
+        return postMetadata;
+
+    } catch (err) {
+        throw new Error(err)
+    }
 }
