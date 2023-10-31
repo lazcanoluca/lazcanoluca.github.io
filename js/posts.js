@@ -1,5 +1,3 @@
-export { loadPosts }
-
 /**
  * Un post.
  * @typedef {Object} Post
@@ -7,36 +5,43 @@ export { loadPosts }
  * @property {string} subtitulo - Subtitulo.
  */
 
+
 const POSTS_DIR = '../posts'
 
 /**
- * Carga los posts desde /posts.
- * @returns {Post[]}
+ * Devuelve las rutas de los posts en /posts.
+ * @returns {string[]}
  */
-async function loadPosts() {
-
-    let files
+export async function loadPosts(src = POSTS_DIR) {
 
     try {
-        files = await fetch(POSTS_DIR)
-    } catch {
-        console.log('Error.')
-        return new Error('No se pudo fetchear el directorio.')
-    }
-
-    if (files.ok) {
+        const files = await fetch(POSTS_DIR)
         const text = await files.text()
-        const fileNames = text
+        return text
             .split("\"")
             .filter(str =>
                 str.trim().endsWith('.html') &&
                 str.trim().startsWith('\/')
             );
-        console.log(fileNames)
+    } catch (err) {
+        throw new Error('No se pudo fetchear el directorio.')
     }
+}
 
-    // for (const file of files) {
-    //     console.log(file)
-    // }
-
+/**
+ * Parsea el HTML pasado y devuelve el post.
+ * @param {string} src - The HTML content to parse.
+ * @returns {Post} - The parsed post object.
+ */
+export async function parseHtmlToPost(src) {
+    fetch(src)
+        .then(res => res.text())
+        .then(data => {
+            const metadata = data.getElementsByTagName('meta');
+            const autor = metadata.namedItem('autor').content;
+            const titulo = metadata.namedItem('titulo').content;
+        })
+        .catch(e => {
+            return new Error('No se pudo cargar e')
+        })
 }
