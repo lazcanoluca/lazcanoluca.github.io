@@ -49,6 +49,11 @@ header {
   fill: var(--primary);
 }
 
+.selected {
+  color: var(--primary);
+  fill: var(--primary);
+}
+
 main {
   width: 100%;
   min-height: 100vh;
