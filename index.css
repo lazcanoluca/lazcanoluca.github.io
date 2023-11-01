@@ -22,6 +22,7 @@ header {
 .nav-icon {
   margin-right: 1rem;
   fill: var(--secondary-dark);
+  max-height: 1rem;
 }
 
 .social-icon {
@@ -36,6 +37,7 @@ header {
 }
 
 .nav-item {
+  font-family: "Ubuntu", sans-serif;
   padding: 0.5rem;
   color: var(--secondary-foreground);
 }
@@ -55,4 +57,32 @@ main {
 
   background-color: var(--secondary);
   color: var(--secondary-foreground);
+}
+
+.page-title-block {
+  margin-bottom: 2rem;
+}
+
+.page-title-block > h2 {
+  margin-top: 1rem;
+}
+
+.content {
+}
+
+#shell {
+}
+
+#shell-prompt {
+  color: #84cc16;
+}
+
+#shell-prompt-tilde {
+  color: #0ea5e9;
+}
+
+#shell-input {
+}
+
+#shell-output {
 }

@@ -37,15 +37,23 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+code,
+a {
   font-size: inherit;
   font-weight: inherit;
+  line-height: 1.3rem;
+  text-decoration: none;
+}
+
+code {
+  font-family: "Ubuntu Mono", monospace;
 }
 
 p,
 .text-body {
   font-family: "Ubuntu", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .text-title,
@@ -94,4 +102,8 @@ h2 {
 
 .w-full {
   width: 100%;
+}
+
+.underline {
+  text-decoration-line: underline;
 }
