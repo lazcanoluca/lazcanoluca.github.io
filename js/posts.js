@@ -1,3 +1,5 @@
+export { loadPostsRoutes, getPostMetadata, getPostsList }
+
 /**
  * Un post.
  * @typedef {Object} PostMetadata
@@ -13,7 +15,7 @@ const POSTS_DIR = '../posts'
  * @param {string?} src - El directorio con los posts.
  * @returns {string[]} - Un array con las rutas de los posts.
  */
-export async function loadPostsRoutes(src = POSTS_DIR) {
+async function loadPostsRoutes(src = POSTS_DIR) {
 
     try {
         const files = await fetch(src)
@@ -38,7 +40,7 @@ export async function loadPostsRoutes(src = POSTS_DIR) {
  * @param {string} src - The HTML content to parse.
  * @returns {PostMetadata} - The parsed post object.
  */
-export async function getPostMetadata(src) {
+async function getPostMetadata(src) {
 
     try {
         const files = await fetch(src);
@@ -66,7 +68,7 @@ export async function getPostMetadata(src) {
  * @param {string?} src - El directorio con los posts.
  * @returns {PostMetadata[]} Array con la metadata de cada posts.
  */
-export async function getPostsList(src = POSTS_DIR) {
+async function getPostsList(src = POSTS_DIR) {
 
     try {
         const postsRoutes = await loadPostsRoutes(src);
