@@ -6,29 +6,6 @@ body {
   display: flex;
 }
 
-header {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  width: var(--sidebar-width);
-  height: 100vh;
-  padding: 2rem;
-  background-color: var(--secondary-dark);
-  border-right: 0.1rem solid var(--primary);
-}
-
-.nav-icon {
-  margin-right: 1rem;
-  fill: var(--secondary-dark);
-  max-height: 1rem;
-}
-
-.social-icon {
-  fill: var(--primary);
-}
-
 .border {
   border: solid;
   border-width: var(--border-width);
@@ -36,23 +13,7 @@ header {
   border-color: var(--border-color);
 }
 
-.nav-item {
-  font-family: "Ubuntu", sans-serif;
-  padding: 0.5rem;
-  color: var(--secondary-foreground);
-}
 
-.nav-item:hover,
-.nav-item:focus,
-.nav-item:hover > .nav-icon {
-  color: var(--primary);
-  fill: var(--primary);
-}
-
-.selected {
-  color: var(--primary);
-  fill: var(--primary);
-}
 
 main {
   width: 100%;
