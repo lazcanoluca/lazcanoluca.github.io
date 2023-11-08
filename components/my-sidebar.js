@@ -58,7 +58,7 @@ class MySidebar extends HTMLElement {
             <header>
                 <nav>
                     <ul>
-                        <a href="/" onclick="route()">
+                        <a href="#home">
                             <li id="home" class="nav-item flex align-center">
                                 <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="1rem" viewBox="0 0 576 512">
                                     <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -68,7 +68,7 @@ class MySidebar extends HTMLElement {
                                 Home
                             </li>
                         </a>
-                        <a href="/portfolio" onclick="route()">
+                        <a href="#portfolio">
                             <li id="portfolio" class="nav-item flex align-center">
                                 <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="1rem" viewBox="0 0 512 512">
                                     <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -78,7 +78,7 @@ class MySidebar extends HTMLElement {
                                 Portfolio
                             </li>
                         </a>
-                        <a href="/posts" onclick="route()">
+                        <a href="#posts">
                             <li id="posts" class="nav-item flex align-center">
                                 <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="1rem" viewBox="0 0 512 512">
                                     <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -88,7 +88,7 @@ class MySidebar extends HTMLElement {
                                 Posts
                             </li>
                         </a>
-                        <a href="/about" onclick="route()">
+                        <a href="#about">
                             <li id="about" class="nav-item flex align-center">
                                 <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="1rem" viewBox="0 0 576 512">
                                     <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -98,7 +98,7 @@ class MySidebar extends HTMLElement {
                                 About
                             </li>
                         </a>
-                        <a href="/resume" onclick="route()">
+                        <a href="#resume">
                             <li id="resume" class="nav-item flex align-center">
                                 <!-- <div style="height: 1rem; width: 1rem;"> -->
                                 <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="1rem" maxheight="1rem"
