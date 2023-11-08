@@ -107,3 +107,22 @@ h2 {
 .underline {
   text-decoration-line: underline;
 }
+
+.page-title-block {
+  margin-bottom: 2rem;
+}
+
+.page-title-block > h2 {
+  margin-top: 1rem;
+}
+
+/* body {
+  display: flex;
+} */
+
+/* .border {
+  border: solid;
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
+  border-color: var(--border-color);
+} */

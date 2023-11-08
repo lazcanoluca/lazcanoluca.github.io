@@ -6,21 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title lang="sp">Blog de Luca</title>
     <title lang="en">Luca's blog</title>
-    <script src="./index.js" type="module"></script>
-    <script src="./js/posts.js" type="module"></script>
-    <script src="./tests/tests.js" type="module"></script>
-    <link rel="stylesheet" href="index.css">
+
+    <!-- Global styles. -->
     <link rel="stylesheet" href="global.css">
 
+    <!-- Components. -->
     <script src="components/my-sidebar.js"></script>
-    <script src="components/my-main.js"></script>
+
+    <!-- <script src="./index.js" type="module"></script>
+    <script src="./js/posts.js" type="module"></script>
+    <script src="./tests/tests.js" type="module"></script> -->
+    <!-- <link rel="stylesheet" href="index.css"> -->
+
+    <!-- <script src="components/my-main.js"></script> -->
+    <!-- <script src="lib/router.js"></script> -->
     <!-- <script src="./components/sidebar/my-sidebar.js" type="module"></script> -->
 </head>
 
 <body>
-    <my-sidebar></my-sidebar>
-    <main id="content-placeholder">
-    </main>
+    <style>
+        main {
+            width: calc(100% - var(--sidebar-width));
+            min-height: 100vh;
+            margin-left: var(--sidebar-width);
+            padding: 4rem;
+
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+        }
+    </style>
+    <div id="root">
+        <my-sidebar></my-sidebar>
+        <main id="main-page"></main>
+        <!-- <main id="content-placeholder">
+        </main> -->
+        <!-- <my-main>
+            <slot id="content-placeholder" name="content-placeholder"></slot>
+        </my-main> -->
+    </div>
+    <script src="lib/router.js"></script>
 </body>
 
 </html>
